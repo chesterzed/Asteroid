@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d803bf295e83ed4491c6309e3cd0464, type: 3}
+  m_Name: ObjectGenerator
+  m_EditorClassIdentifier: 
+  _UFOPrefab: {fileID: 649360293225672468, guid: 6e226cd1fafb12842a89fb24243578e0, type: 3}
+  _amountOfAsteroids: 0
+  _asteroidSpeed: 75
+  _minTimeSpawnUFO: 20
+  _maxTimeSpawnUFO: 40
+  _asteroidList:
+  - {fileID: 7832996124077791628, guid: 378086777118d69439dd192973f3f785, type: 3}
+  - {fileID: 7832996124077791628, guid: aed96313e473660428d6e42e029bb0d8, type: 3}
+  - {fileID: 7832996124077791628, guid: 9f37d1ad55ca46c4ea7f1ba3351d2a36, type: 3}

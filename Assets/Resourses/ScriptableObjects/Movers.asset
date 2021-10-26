@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1080297310176894a856bfb7169cceb0, type: 3}
+  m_Name: Movers
+  m_EditorClassIdentifier: 
+  _maxSpeed: 20
+  _rotationKeyboardSpeed: 250
+  _rotationMouseSpeed: 5
+  _accelerationFactor: 5
+  _UFOSpeed: 20
+  _bulletPrefab:
+  - {fileID: 6067250489986905457, guid: 884a52076cc7fb64da35d1cdd4a5ec74, type: 3}
+  - {fileID: 7447469747245356273, guid: 298ca89d156b3604796e6e4cede7d4f5, type: 3}
+  _bulletSpeed: 300

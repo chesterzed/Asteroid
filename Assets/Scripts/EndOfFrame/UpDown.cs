@@ -10,8 +10,6 @@ public class UpDown : MonoBehaviour
     {
         _outObj = collision.GetComponent<Transform>();
         _outObj.position = new Vector2(_outObj.position.x, -(Mathf.Sign(_outObj.position.y) * (Mathf.Abs(_outObj.position.y) - 0.1f)));
-
-        
     }
 
 }
