@@ -4,7 +4,9 @@ using UnityEngine;
 public class UFO : MonoBehaviour
 {
 	[SerializeField] private UFO_SO _UFO_SO;
+	[SerializeField] private AudioSource _shootSound;
 
+	private AudioSource _errorSound;
 	private UIController _UIController;
 	private UFOMover _mover;
 	private float _switchDirTimer;
@@ -13,6 +15,7 @@ public class UFO : MonoBehaviour
 
     private void Awake()
     {
+		_errorSound = FindObjectOfType<ErrorSoundUFO>().GetComponent<AudioSource>();
 		_UIController = FindObjectOfType<UIController>();
 		_mover = GetComponent<UFOMover>();
 	}
@@ -36,6 +39,7 @@ public class UFO : MonoBehaviour
 			_timer = 0;
 			_mover.Shoot();
 			_shootTime = Random.Range(0.5f, 4f);
+			_shootSound.Play();
 		}
 
 		if (_switchDirTimer > _UFO_SO.SwitchDirTime)
@@ -51,6 +55,7 @@ public class UFO : MonoBehaviour
 	{
 		if (collision.GetComponent<Bullet>())
 		{
+			_errorSound.Play();
 			_UIController.ScoreCounter(_UFO_SO.GetPoints);
 			Destroy(collision.gameObject);
 			Destroy(gameObject);

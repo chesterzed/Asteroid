@@ -10,9 +10,11 @@ public class Asteroid : MonoBehaviour
 	private EventController _eventController;
 	private UIController _UIController;
 	private GameObject[] _asteroidList;
+	private AudioSource _blustSound;
 
 	private void OnEnable()
 	{
+		_blustSound = FindObjectOfType<BlastSound>().GetComponent<AudioSource>();
 		_UIController = FindObjectOfType<UIController>();
 		_eventController = FindObjectOfType<EventController>();
 	}
@@ -27,6 +29,7 @@ public class Asteroid : MonoBehaviour
 
 		if (collision.GetComponent<Bullet>())
 		{
+			_blustSound.Play();
 			if (_size > 0)
 			{
 				Vector3 lastVel = gameObject.GetComponent<Rigidbody2D>().velocity.normalized;
@@ -49,6 +52,7 @@ public class Asteroid : MonoBehaviour
 
 		else if (collision.GetComponent<UFO>())
 		{
+			_blustSound.Play();
 			Destroy(collision.gameObject);
 			Destroy(gameObject);
 		}

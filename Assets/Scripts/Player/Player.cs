@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 	protected Animator animator;
 
 	[SerializeField] private UIController _UIController;
+	[SerializeField] private AudioSource _damagedSound;
 
 	private float _timer = 0;
 
@@ -30,6 +31,8 @@ public class Player : MonoBehaviour
 		{
 			_UIController.NowHP--;
 			_UIController.HealthCounter(_UIController.NowHP);
+
+			_damagedSound.Play();
 
 			if (_UIController.NowHP <= 0)
 			{

@@ -135,5 +135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d96aaa547604142b2219dd62ba8e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _size: 0
   _asteroidSpeed: 4
   _getPoints: 100

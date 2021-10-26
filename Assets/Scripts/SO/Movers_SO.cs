@@ -16,6 +16,7 @@ public class Movers_SO : ScriptableObject
 	[SerializeField] private GameObject[] _bulletPrefab;
 	[SerializeField] private float _bulletSpeed;
 
+
 	public float MaxSpeed => _maxSpeed;
 	public float RotationKeyboardSpeed => _rotationKeyboardSpeed;
 	public float RotationMouseSpeed => _rotationMouseSpeed;

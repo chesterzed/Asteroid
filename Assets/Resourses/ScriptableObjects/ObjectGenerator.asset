@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ObjectGenerator
   m_EditorClassIdentifier: 
   _UFOPrefab: {fileID: 649360293225672468, guid: 6e226cd1fafb12842a89fb24243578e0, type: 3}
-  _amountOfAsteroids: 0
+  _amountOfAsteroids: 2
   _asteroidSpeed: 75
-  _minTimeSpawnUFO: 20
-  _maxTimeSpawnUFO: 40
+  _minTimeSpawnUFO: 3
+  _maxTimeSpawnUFO: 7
   _asteroidList:
   - {fileID: 7832996124077791628, guid: 378086777118d69439dd192973f3f785, type: 3}
   - {fileID: 7832996124077791628, guid: aed96313e473660428d6e42e029bb0d8, type: 3}

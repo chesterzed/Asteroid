@@ -3,6 +3,8 @@ using UnityEngine;
 public class PlayerMover : MonoBehaviour
 {
 	[SerializeField] private Movers_SO _moversSO;
+	[SerializeField] private AudioSource _shootSound;
+	[SerializeField] private AudioSource _moveSound;
 
 	private Rigidbody2D rb;
 
@@ -22,6 +24,7 @@ public class PlayerMover : MonoBehaviour
 	{
 		if (isMoving)
 		{
+			_moveSound.PlayOneShot(_moveSound.clip);
 			_timer += Time.fixedDeltaTime * _moversSO.AccelerationFactor;
 
 			if (_timer > 1)
@@ -59,6 +62,7 @@ public class PlayerMover : MonoBehaviour
 
 	public void Shoot()
 	{
+		_shootSound.Play();
 		Instantiate(_moversSO.BulletsPrefab[0], transform.position, transform.rotation).GetComponent<Rigidbody2D>().AddForce(transform.up * _moversSO.BulletSpeed, ForceMode2D.Force);
 	}
 }

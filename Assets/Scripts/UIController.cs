@@ -47,6 +47,8 @@ public class UIController : MonoBehaviour
 
 	private void Reset()
 	{
+		_eventController.Reset();
+
 		NowHP = _startSetup_SO.HP;
 		_nowScore = _startSetup_SO.Score;
 
@@ -95,16 +97,11 @@ public class UIController : MonoBehaviour
 		ShowMenu(false, true);
 
 		Reset();
-		_eventController.Reset();
 	}
 
 	public void SwitchInput(int num)
 	{
-		Reset();
-		_eventController.Reset();
-
 		_playerChoice = num;
-		ShowMenu(true, false);
 	}
 
 	public void QuitApp()
